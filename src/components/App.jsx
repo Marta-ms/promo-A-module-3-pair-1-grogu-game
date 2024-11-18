@@ -4,14 +4,14 @@
 // import './components/App.jsx'
 
 import "../scss/App.scss";
+import Header from "./Header";
+//import Board from "./Board";
 //import groguImg from "../images/grogu.jpg";
 
 function App() {
   return (
     <>
-    <header>
-      <h1>¡Cuidado con Grogu!</h1>
-    </header>
+   <Header />
     <main className="page">
       <section className="board">
         <div className="cell"><div className="grogu">👣</div></div>
