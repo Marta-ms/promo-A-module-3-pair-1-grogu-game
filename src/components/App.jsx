@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 import Header from './Header';
 import Board from "./Board";
+import Dice from "./Dice";
 import "../scss/App.scss";
 import {useState} from "react";
 //import groguImg from "../images/grogu.jpg";
