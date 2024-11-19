@@ -6,12 +6,16 @@ import {useState} from "react";
 //import groguImg from "../images/grogu.jpg";
 
 function App() {
-  const [randomNumber, setRandomNumber] = useState ("Lanzar dado");
+  const [randomNumber, setRandomNumber] = useState ("");
   const rollDice = () => {
     const randomNumber = Math.floor(Math.random() *4) +1; //genera un número aleatorio entre 1 y 4
     setRandomNumber(randomNumber);
+    console.log(randomNumber);
+     
+  //   if (randomNumber === 1) {
 
-  };
+
+  // };
   return (
     <>
     
@@ -22,7 +26,7 @@ function App() {
       
   
       <section>
-        <button className="dice" onClick={rollDice} >{randomNumber}</button>
+        <Dice />
         <div className="game-status">En curso</div>
       </section>
 
@@ -51,13 +55,9 @@ function App() {
   )
 
   
-
-
-
-
-
+  
 }
-
+}
 //Pasos 
 /* Cuando la usuaria haga click en lanzar dado
  - generar número aleatorio entre 1 y 4
