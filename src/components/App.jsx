@@ -10,8 +10,6 @@ function App() {
   const rollDice = () => {
     const randomNumber = Math.floor(Math.random() *4) +1; //genera un número aleatorio entre 1 y 4
     setRandomNumber(randomNumber);
-    //console.log(randomNumber);
-
 
   };
   return (
