@@ -1,11 +1,11 @@
 import "../scss/App.scss";
 
 
-function Dice() {
+function Dice({onClickDice}) {
 
     return (
     <div>
-        <button className="dice" onClick={rollDice} >🎲</button>
+        <button className="dice" onClick={onClickDice} >🎲</button>
     </div>
     
     )
