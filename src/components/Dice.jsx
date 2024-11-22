@@ -9,6 +9,6 @@ function Dice({onClickDice}) {
     </div>
     
     )
-}
+};
 
 export default Dice;

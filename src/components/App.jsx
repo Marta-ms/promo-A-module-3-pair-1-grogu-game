@@ -2,6 +2,7 @@
 import Header from './Header';
 import Board from "./Board";
 import Dice from "./Dice";
+import Form from "./Form";
 import "../scss/App.scss";
 import {useState} from "react";
 //import groguImg from "../images/grogu.jpg";
@@ -15,9 +16,17 @@ function App() {
   }
      
   //   if (randomNumber === 1) {
-
-
   // };
+
+  const [name, setName] = useState ("");
+
+  function
+
+
+
+     //setName(ev.target.value);
+
+
 
   
   return (
@@ -26,6 +35,7 @@ function App() {
     <main className="page">
       
       <Header />
+      <Form userName={name} />
       <Board />
       
   
