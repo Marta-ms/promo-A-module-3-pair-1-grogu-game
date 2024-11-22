@@ -1,30 +1,46 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './components/App.jsx'
-
+//import { useState } from 'react'
+import Header from './Header';
+import Board from "./Board";
+import Dice from "./Dice";
+import Form from "./Form";
 import "../scss/App.scss";
-import Header from "./Header";
-//import Board from "./Board";
+import {useState} from "react";
 //import groguImg from "../images/grogu.jpg";
 
 function App() {
+  const [randomNumber, setRandomNumber] = useState ("");
+  const rollDice = () => {
+    const randomNumber = Math.floor(Math.random() *4) +1; //genera un número aleatorio entre 1 y 4
+    setRandomNumber(randomNumber);
+    console.log(randomNumber);
+  }
+     
+  //   if (randomNumber === 1) {
+  // };
+
+  const [name, setName] = useState ("");
+
+  function
+
+
+
+     //setName(ev.target.value);
+
+
+
+  
   return (
     <>
-   <Header />
+    
     <main className="page">
-      <section className="board">
-        <div className="cell"><div className="grogu">👣</div></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-      </section>
+      
+      <Header />
+      <Form userName={name} />
+      <Board />
+      
   
       <section>
-        <button className="dice">Lanzar Dado</button>
+        <Dice onClickDice={rollDice}/>
         <div className="game-status">En curso</div>
       </section>
 
@@ -52,5 +68,24 @@ function App() {
 
   )
 }
+//Pasos 
+/* Cuando la usuaria haga click en lanzar dado
+ - generar número aleatorio entre 1 y 4
+ - si es 4 --> grogu avanza 1 casilla 
+      y si  es 1 -->quitar una galleta
+      si es 2 --> quitar una huevo
+      si es 3 --> quitar una rana
+- Saber en qué posición se encuentra el grogu o mercancias 
+   - Mostrar en pantalla el estado del juego
+      -si grogu avanza --> mostrar mesanje  "Grogu ha avanzado"
+      -si se quita una galleta --> mostrar mensaje "Se ha quitado una galleta"
+      -si se quita un huevo --> mostrar mensaje "Se ha quitado un huevo"
+      -si se quita una rana --> mostrar mensaje "Se ha quitado una rana"
+
+
+      */
+
+
+
 
 export default App
