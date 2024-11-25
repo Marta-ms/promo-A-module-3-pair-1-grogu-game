@@ -20,7 +20,7 @@ function App() {
 
   const [name, setName] = useState ("");
 
-  function
+  //function
 
 
 
@@ -30,7 +30,7 @@ function App() {
 
   
   return (
-    <>
+    
     
     <main className="page">
       
@@ -64,7 +64,7 @@ function App() {
       </section>
     </main>
 
-    </>
+    
 
   )
 }

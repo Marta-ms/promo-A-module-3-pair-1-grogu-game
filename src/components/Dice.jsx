@@ -1,6 +1,5 @@
 import "../scss/App.scss";
 
-
 function Dice({onClickDice}) {
 
     return (
