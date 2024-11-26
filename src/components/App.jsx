@@ -8,11 +8,16 @@ import {useState} from "react";
 //import groguImg from "../images/grogu.jpg";
 
 function App() {
-  const [randomNumber, setRandomNumber] = useState ("");
+  const [randomNumber, setRandomNumber] = useState (null);
+  const [groguPosition, setGroguPosition] = useState (0); // [la información, la función que ejecutaremos para cambiar el vslor]
+
   const rollDice = () => {
     const randomNumber = Math.floor(Math.random() *4) +1; //genera un número aleatorio entre 1 y 4
+    const newPosition = groguPosition + randomNumber; //también funciona con las llaves
     setRandomNumber(randomNumber);
-    console.log(randomNumber);
+    setGroguPosition(newPosition);
+    //console.log(randomNumber);
+    //console.log(newPosition);
   }
      
   //   if (randomNumber === 1) {
@@ -22,9 +27,11 @@ function App() {
 
   //function
 
-
-
      //setName(ev.target.value);
+
+ 
+
+  
 
 
 
@@ -36,7 +43,7 @@ function App() {
       
       <Header />
       <Form userName={name} />
-      <Board />
+      <Board groguPosition={groguPosition}/>
       
   
       <section>
